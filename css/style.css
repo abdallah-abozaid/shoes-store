@@ -1,0 +1,1020 @@
+*,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+}
+:root {
+  --color: #4ca2ac;
+}
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+@keyframes moving {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0, 10px);
+  }
+}
+.hide {
+  display: none;
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10000000;
+  left: 0;
+  background-color: white;
+}
+.loader img {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  top: 50%;
+  z-index: 10000000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* @media (min-width: 576px) { ... }
+
+@media (min-width: 768px) { ... }
+
+@media (min-width: 992px) { ... }
+
+@media (min-width: 1200px) { ... }
+
+@media (min-width: 1400px) { ... } */
+/* -------------start header */
+.myhaeder {
+  z-index: 10000;
+  box-shadow: 2px 2px 12px grey;
+}
+.top-header {
+  background: linear-gradient(45deg, #026772, #60e3f1);
+  color: white;
+}
+.top-header i {
+  animation: scaling 1s linear infinite alternate;
+}
+.top-header span {
+  font-size: 12px;
+}
+.top-header span a {
+  color: white;
+}
+.top-header span span {
+  color: rgb(233, 233, 233);
+}
+.navbar-light .navbar-brand {
+  font-size: 30px;
+  font-family: "Courgette", cursive;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: var(--color);
+  margin: 0 10px;
+  font-weight: 500;
+  position: relative;
+}
+.navbar-light .navbar-nav .nav-link span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s linear;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color);
+}
+.navbar-light .navbar-nav .nav-link:hover span {
+  width: 100%;
+}
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--color);
+  transition: all 0.4s linear;
+  background-color: rgb(230, 230, 230);
+}
+.navbar-light .navbar-nav .nav-link.active span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s linear;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color);
+}
+.cart {
+  font-family: "Courgette", cursive;
+  cursor: pointer;
+}
+.cart:hover {
+  text-decoration: underline;
+}
+.cart span {
+  margin: 0 4px;
+  font-size: 18px;
+}
+.cart span:first-of-type {
+  color: grey;
+}
+.cart span:last-of-type {
+  background-color: var(--color);
+  color: white;
+  padding: 3px 5px;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.navbar-toggler {
+  border: 2px solid grey !important;
+  padding: 6px;
+}
+.navbar-toggler span {
+  width: 35px;
+  height: 3px;
+  background-color: grey;
+  z-index: 100;
+  display: block;
+  color: grey;
+}
+.navbar-toggler span.sec-p {
+  margin: 5px 0;
+  background-color: var(--color);
+  width: 15px;
+  margin-right: auto;
+}
+.navbar-toggler span.sec-p.open {
+  width: 35px;
+  transition: all 0.5s linear;
+}
+.offcanvas h5 {
+  color: var(--color);
+}
+.offcanvas .empty {
+  color: grey;
+  font-size: 12px;
+  text-align: center;
+}
+.offcanvas:hover h5 span {
+  width: 100px;
+  transition: all 0.4s linear;
+}
+.offcanvas h5 span {
+  width: 40px;
+  height: 2px;
+  display: inline-block;
+  margin-bottom: 5px;
+  background-color: var(--color);
+}
+@media (max-width: 992px) {
+  .navbar-light .navbar-nav .nav-link,
+  .cart {
+    text-align: center;
+  }
+}
+/* -------------end header */
+/* -------------start main1 */
+
+.main1 img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+.main1 {
+  position: relative;
+}
+.main1::after {
+  content: " ";
+  z-index: -1;
+  top: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.692);
+}
+.main1 .texts span.fst {
+  width: 100px;
+  height: 2px;
+  display: inline-block;
+  margin-bottom: 5px;
+  background-color: white;
+  margin-right: 5px;
+}
+.main1 .texts span.sec {
+  font-family: "Courgette", cursive;
+}
+.main1 .texts .pfst {
+  margin: 20px 0;
+  letter-spacing: 5px;
+  font-size: 60px;
+  height: 175px;
+}
+.main1 .texts .psec {
+  margin: 10px 0;
+  width: 70%;
+}
+.main1 .texts button,
+.main5 button {
+  width: 140px;
+  font-family: "Courgette", cursive;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 20px;
+}
+.main1 .texts button:hover,
+.main5 button:hover {
+  background-color: var(--color);
+  color: white;
+  border: 2px solid white;
+  transition: all 0.2s linear;
+}
+.main1 > i {
+  cursor: pointer;
+  width: 100px;
+  margin: 1px auto;
+  display: block;
+  animation: moving 1s linear infinite alternate;
+}
+.main1 > i:hover {
+  color: var(--color) !important;
+  transition: all 0.5s linear;
+}
+@media (max-width: 1200px) {
+  .main1 .texts .pfst {
+    margin: 10px 0;
+    font-size: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .main1 .texts .pfst {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .main1 .texts .pfst {
+    font-size: 35px;
+  }
+  .main1 .texts .psec {
+    width: 85%;
+  }
+  .main1 .texts button {
+    width: 130px;
+    height: 35px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .main1 .texts .pfst {
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 0px;
+    height: 160px;
+  }
+  .main1 .texts .psec {
+    width: 100%;
+    font-size: 13px;
+  }
+  .main1 .texts .pfst br {
+    display: none;
+  }
+  .main1 .texts span.fst {
+    width: 70px;
+  }
+}
+/* -------------end main1*/
+/* -------------start main2*/
+.main2 .head {
+  position: relative;
+  width: 200px;
+  margin: 10px auto;
+}
+.main2 .head::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -50px;
+  width: 60px;
+  height: 2px;
+  background-color: grey;
+}
+.main2 .head::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  width: 60px;
+  height: 2px;
+  background-color: grey;
+}
+.main2 .head2 {
+  font-size: 30px;
+  font-family: "Courgette", cursive;
+}
+.main2 .text {
+  width: 80%;
+  margin: 10px auto;
+}
+@media (max-width: 576px) {
+  .main2 .head2 {
+    font-size: 20px;
+  }
+  .main2 .text {
+    width: 95%;
+    font-size: 14px;
+  }
+}
+
+/* -------------end main2*/
+/* -------------strat main3*/
+.main3 .container .row .card {
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.055);
+}
+.main3 .container .row .card-body p:last-of-type,
+.main3 .container .row .card-body p:first-of-type {
+  z-index: 110;
+}
+.main3 .container .row .card-img-top {
+  height: 65%;
+  transform: scale(0.93);
+  border-radius: 30px;
+}
+.main3 .container .row:first-of-type div:first-of-type {
+  font-size: 23px;
+  font-family: "Courgette", cursive;
+}
+.main3 .container .row:first-of-type div:last-of-type {
+  font-family: "Courgette", cursive;
+}
+.main3 .container .row:first-of-type div:last-of-type:hover {
+  color: var(--color);
+  font-family: "Courgette", cursive;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.main3 .row:last-of-type .col:hover {
+  z-index: 111;
+  transition: all 0.5s linear;
+}
+.main3 .row:last-of-type .col {
+  position: relative;
+  height: 250px;
+}
+.main3 .row:last-of-type .col .inner {
+  position: absolute;
+  top: 0;
+  border-radius: 30px;
+  z-index: 100;
+  box-shadow: 1px 1px 10px grey;
+  display: none;
+  left: 3%;
+  width: 94%;
+  height: 99%;
+  background-color: rgba(0, 0, 0, 0.068);
+}
+.main3 .row:last-of-type .col .inner button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  width: 100px;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  border-radius: 20px;
+  font-family: "Courgette", cursive;
+  border: 2px solid white;
+  background-color: #a52234;
+  transition: all 0.3s linear;
+  color: white;
+  animation: rotate 1s linear infinite alternate;
+}
+@keyframes rotate {
+  0% {
+    transform: translateY(0px) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translateY(10px) translate(-50%, -50%);
+  }
+}
+.main3 .row:last-of-type .col .inner button:hover {
+  background-color: white;
+  color: #a52234;
+  border: 2px solid #a52234;
+}
+.main3 .row:last-of-type .col:hover .inner {
+  display: block;
+  transition: all 0.5s linear;
+}
+/* -------------end main3*/
+/* -------------start main5*/
+.main5 {
+  background-image: url(/imges/back.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 100px 0;
+  color: white;
+  padding: 100px 0px;
+}
+.main5 span.sec {
+  font-family: "Courgette", cursive;
+}
+.main5 h1 {
+  font-family: "Courgette", cursive;
+}
+.main5 span.fst {
+  width: 50px;
+  height: 2px;
+  background-color: rgb(206, 206, 206);
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.main5 p {
+  width: 70%;
+}
+@media (max-width: 768px) {
+  .main5 {
+    padding: 50px 0;
+  }
+  .main5 p {
+    width: 80%;
+    font-size: 15px;
+  }
+  .main5 button {
+    font-size: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .main5 p {
+    width: 90%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .main5 button {
+    font-size: 14px;
+  }
+}
+/* -------------end main5*/
+/* -------------start main7*/
+.main7 {
+  margin: 200px 0 100px;
+  position: relative;
+}
+.main7 .outer1 {
+  position: absolute;
+  width: 300px;
+  top: -120px;
+  right: 20%;
+  height: 200px;
+  text-align: center;
+}
+.main7 .outer1 h6,
+.main7 .outer2 h6 {
+  font-family: "Courgette", cursive;
+  font-weight: 700;
+}
+.main7 .outer1 p {
+  font-size: 13px;
+}
+.main7 .outer1::before {
+  content: "+";
+  position: absolute;
+  top: 150px;
+  color: white;
+  font-size: 20px;
+  padding: 0px 5px;
+  z-index: 2;
+  border-radius: 50%;
+  right: 46.5%;
+  background-color: #a52234;
+}
+.main7 .outer1::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  height: 70px;
+  width: 3px;
+  top: 90px;
+  right: 50%;
+  background-color: #a52234;
+}
+@media (max-width: 992px) {
+  .main7 .outer1 {
+    top: -140px;
+    right: 16%;
+    width: 250px;
+  }
+  .main7 .outer1 p {
+    font-size: 11px;
+  }
+  .main7 .outer1::before {
+    font-size: 15px;
+    top: 160px;
+  }
+  .main7 .outer1::after {
+    width: 2px;
+    top: 90px;
+  }
+}
+@media (max-width: 576px) {
+  .main7 .outer1 {
+    right: 3%;
+    width: 200px;
+  }
+  .main7 .outer1 p {
+    font-size: 10px;
+  }
+  .main7 .outer1::before {
+    font-size: 12px;
+    top: 150px;
+  }
+  .main7 .outer1::after {
+    top: 80px;
+    width: 1px;
+  }
+}
+.main7 .outer2 {
+  position: absolute;
+  width: 300px;
+  top: 90px;
+  left: 17%;
+  height: 200px;
+  text-align: center;
+}
+.main7 .outer2 p {
+  font-size: 13px;
+}
+.main7 .outer2::before {
+  content: "+";
+  position: absolute;
+  top: 150px;
+  color: white;
+  font-size: 20px;
+  padding: 0px 5px;
+  z-index: 2;
+  border-radius: 50%;
+  right: 46.5%;
+  background-color: #a52234;
+}
+.main7 .outer2::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  height: 70px;
+  width: 3px;
+  top: 80px;
+  right: 50%;
+  background-color: #a52234;
+}
+@media (max-width: 1200px) {
+  .main7 .outer2 {
+    top: 70px;
+    width: 250px;
+  }
+  .main7 .outer2 p {
+    font-size: 11px;
+  }
+  .main7 .outer2::before {
+    font-size: 15px;
+    top: 130px;
+  }
+  .main7 .outer2::after {
+    width: 2px;
+    top: 70px;
+  }
+}
+@media (max-width: 992px) {
+  .main7 .outer2 {
+    top: 25px;
+    right: 70%;
+    width: 250px;
+  }
+  .main7 .outer2 p {
+    font-size: 11px;
+  }
+  .main7 .outer2::before {
+    font-size: 15px;
+  }
+  .main7 .outer2::after {
+    width: 2px;
+  }
+}
+@media (max-width: 768px) {
+  .main7 .outer2 {
+    right: 50%;
+    top: -70px;
+    width: 150px;
+  }
+  .main7 .outer2 p {
+    font-size: 10px;
+  }
+  .main7 .outer2::before {
+    font-size: 12px;
+    top: 180px;
+    right: 44.5%;
+  }
+  .main7 .outer2::after {
+    top: 120px;
+    width: 1px;
+  }
+}
+@media (max-width: 576px) {
+  .main7 .outer2 {
+    right: 160%;
+    width: 160px;
+    top: -70px;
+    transform: translateX(-20px);
+  }
+  .main7 .outer2 p {
+    font-size: 10px;
+  }
+  .main7 .outer2::before {
+    font-size: 12px;
+    top: 170px;
+    right: 44.5%;
+  }
+  .main7 .outer2::after {
+    top: 110px;
+    width: 1px;
+  }
+}
+/* -------------end main7*/
+/* -------------start main9*/
+.main9 {
+  margin: 50px 0px;
+  transition: all 0.2s linear;
+}
+.main9 .row .card-body .card-text {
+  font-size: 13px;
+}
+.main9 .row .card-body .card-text span {
+  color: red;
+}
+.main9 .row button {
+  position: absolute;
+  top: -100%;
+  border-radius: 5px;
+  font-family: "Courgette", cursive;
+  right: 10%;
+  border: 2px solid black;
+  padding: 10px 20px;
+  z-index: 10;
+}
+.main9 .row .card-title {
+  font-family: "Courgette", cursive;
+}
+.main9 .row .col,
+.main9 .row .col .card {
+  overflow: hidden;
+}
+.main9 .row .col:hover button {
+  top: 20px;
+  animation: trans 1s linear infinite alternate;
+  transition: all 0.5s linear;
+}
+.main9 .row .col:hover img {
+  transform: scaleX(1.2);
+  transition: all 0.5s linear;
+}
+.main9 .row button:hover {
+  background-color: var(--color);
+  color: white;
+  border-color: white;
+}
+@keyframes trans {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+@media (max-width: 576px) {
+  .main9 .row .col {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+/* -------------end main9*/
+/* -------------start main10*/
+.main10 {
+  background-image: url(/imges/back2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 100px 0;
+  color: white;
+  padding: 100px 0px;
+}
+.main10 span.fst {
+  width: 50px;
+  height: 2px;
+  background-color: rgb(206, 206, 206);
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.main10 span.sec,
+.main10 h1 {
+  font-family: "Courgette", cursive;
+}
+.main10 p {
+  width: 70%;
+}
+.main10 .row div input {
+  height: 60px;
+  padding: 5px;
+  width: 100%;
+  font-family: "Courgette", cursive;
+}
+.main10 .row div input[type="email"] {
+  border: 2px solid white;
+  background-color: transparent;
+  padding-left: 20px;
+  color: white;
+}
+.main10 .row div input[type="submit"] {
+  background-color: #ab5b4b;
+  color: white;
+  border: 2px solid white;
+}
+.main10 .row div input[type="submit"]:hover {
+  color: #ab5b4b;
+  border-color: #ab5b4b;
+  background-color: white;
+  transition: all 0.4s linear;
+}
+.main10 .row {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .main10 {
+    padding: 50px 0;
+  }
+  .main10 p {
+    width: 80%;
+    font-size: 15px;
+  }
+  .main10 button {
+    font-size: 15px;
+  }
+  .main10 .row {
+    width: 75%;
+  }
+}
+@media (max-width: 576px) {
+  .main10 .row {
+    width: 90%;
+  }
+  .main10 .row div:last-of-type {
+    font-size: 11px;
+  }
+  .main10 p {
+    width: 80%;
+    font-size: 15px;
+  }
+  .main10 p {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .main10 h1 {
+    font-size: 40px;
+  }
+}
+/* -------------end main10*/
+/* -------------end main12*/
+.main12 {
+  margin: 50px 0px;
+  transition: all 0.2s linear;
+}
+.main12 .row .card-body .card-text {
+  font-size: 13px;
+}
+.main12 .row .card-body .card-text span {
+  color: red;
+}
+.main12 .row button {
+  position: absolute;
+  font-family: "Courgette", cursive;
+  top: -50%;
+  border-radius: 5px;
+  left: 50%;
+  border: 2px solid black;
+  padding: 10px 20px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.main12 .row .col,
+.main12 .row .col .card,
+.main12 .row .col .card img {
+  overflow: hidden;
+  position: relative;
+  border: none;
+}
+.main12 .row .col:hover button {
+  top: 50%;
+  transition: all 0.5s linear;
+}
+
+.main12 .row .col:hover img {
+  transform: scaleX(1.2);
+  transition: all 0.5s linear;
+}
+.main12 .row .col .card-title {
+  font-size: 11px;
+  color: grey;
+}
+.main12 .row .col .line {
+  width: 30px;
+  height: 1px;
+  background-color: grey;
+  display: inline-block;
+  margin: 0px 7px 4px;
+}
+.main12 .row .col:hover .line {
+  width: 80px;
+  transition: all 0.4s linear;
+}
+.main12 .row .col .card-text {
+  font-size: 20px;
+  font-family: "Courgette", cursive;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.main12 .row button:hover {
+  background-color: var(--color);
+  color: white;
+  border-color: white;
+}
+@media (max-width: 576px) {
+  .main12 .row .col {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+/* -------------end main12*/
+/* -----------------------start footer */
+.myfooter {
+  padding: 5% 0;
+}
+.myfooter i {
+  animation: scaling 1s linear infinite alternate;
+}
+.myfooter .row:first-of-type div:first-of-type {
+  font-size: 24px;
+  margin-top: -10px;
+}
+.myfooter .row:first-of-type div:nth-of-type(2) ul {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+.myfooter .row:first-of-type div:nth-of-type(2) ul li:first-of-type span {
+  width: 60px;
+  height: 1px;
+  margin-bottom: 4px;
+  display: inline-block;
+  background-color: white;
+}
+.myfooter .row:first-of-type div:nth-of-type(2) ul:hover li:first-of-type span {
+  background-color: #a52234;
+  height: 2px;
+  margin-bottom: 3px;
+  transition: all 0.3s linear;
+}
+.myfooter .row:first-of-type div:nth-of-type(2) ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.myfooter .row:first-of-type div:nth-of-type(2) ul li:hover a {
+  color: #a52234;
+  transition: all 0.3s linear;
+}
+.myfooter .row:first-of-type div:nth-of-type(2) ul li a {
+  color: white;
+  text-decoration: none;
+}
+.myfooter .row:nth-of-type(2) div:first-of-type p:nth-of-type(2) {
+  padding-right: 20%;
+  font-size: 15px;
+}
+.myfooter .row:nth-of-type(2) div:first-of-type a {
+  width: 70%;
+  color: #a52234;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.myfooter .row:nth-of-type(2) div:first-of-type a span {
+  width: 30px;
+  height: 1px;
+  margin-right: 10px;
+  margin-bottom: 4px;
+  display: inline-block;
+  background-color: #a52234;
+}
+.myfooter .row:nth-of-type(2) div:first-of-type a:hover span {
+  width: 50px;
+  transition: all 0.3s linear;
+}
+
+.input-group {
+  height: 50px;
+}
+.input-group button {
+  color: black;
+}
+.input-group input {
+  color: white !important;
+}
+.input-group button:hover {
+  background-color: #a52234 !important;
+}
+.myfooter .row:nth-of-type(2) div:last-of-type p:first-of-type {
+  font-size: 13px;
+}
+.myfooter .row:nth-of-type(2) div:last-of-type p:last-of-type {
+  text-align: right;
+  font-size: 13px;
+  width: 80%;
+  margin-left: auto;
+}
+@media (max-width: 992px) {
+  .myfooter .row:nth-of-type(2) div:first-of-type p:nth-of-type(2) {
+    padding-right: 0%;
+    font-size: 11px;
+  }
+  .myfooter .row:nth-of-type(2) div:last-of-type p:first-of-type {
+    font-size: 11px;
+  }
+  .myfooter .row:nth-of-type(2) div:last-of-type p:last-of-type {
+    font-size: 11px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .input-group {
+    height: 40px;
+  }
+  .input-group button {
+    font-size: 12px;
+  }
+  .input-group input {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .myfooter .row:nth-of-type(2) div:first-of-type p:nth-of-type(2) {
+    margin-bottom: 2px;
+    padding-right: 0%;
+    font-size: 10px;
+  }
+  .myfooter .row:nth-of-type(2) div:first-of-type {
+    margin: 20px 0;
+  }
+  .myfooter .row:nth-of-type(2) div:first-of-type p:first-of-type {
+    margin-bottom: 2px;
+  }
+  .myfooter .row:nth-of-type(2) div:last-of-type p:last-of-type {
+    text-align: center;
+    font-size: 10px;
+  }
+  .myfooter .row:first-of-type div:nth-of-type(2) ul li:first-of-type {
+    display: none;
+  }
+  .navbar-light .navbar-brand {
+    font-size: 25px;
+  }
+  .myfooter .row:first-of-type div:first-of-type {
+    margin: 10px 0;
+  }
+  .myfooter .row:first-of-type div:nth-of-type(2) ul li {
+    margin: 0 7px;
+  }
+  .myfooter .row:nth-of-type(2) div:last-of-type p:first-of-type {
+    font-size: 10px;
+  }
+}
+/* -----------------------end footer */
+/*# sourceMappingURL=style.css.map */
